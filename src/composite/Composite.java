@@ -15,7 +15,25 @@ public class Composite {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+      CompositeAnimal animalia = new CompositeAnimal("Animalia");
+              
+        CompositeAnimal chordate = new CompositeAnimal("Chordate");
+        CompositeAnimal arthropo = new CompositeAnimal("Arthropoda");
+        
+        CompositeAnimal mammal = new CompositeAnimal("Mammal");
+        CompositeAnimal insect = new CompositeAnimal("Insect");
+    
+        chordate.addProduct(mammal);
+        arthropo.addProduct(insect);
+        
+        animalia.addProduct(chordate);
+        animalia.addProduct(arthropo);
+
+        
+        chainAnimals chain = new chainAnimals();
+        chain.addProduct(animalia);
+        chain.printChain();
+
     }
     
 }

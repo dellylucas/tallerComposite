@@ -9,7 +9,7 @@ package composite;
  *
  * @author girlc
  */
-public class AbstractType {
+public abstract class AbstractType {
     protected String name;
 
     public AbstractType(String name) {
