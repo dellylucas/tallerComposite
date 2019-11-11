@@ -15,9 +15,11 @@ import java.util.List;
  */
 public class chainAnimals {
     private List animals = new ArrayList();
+    private String name;
 
-    public chainAnimals() {
+    public chainAnimals( String name) {
         super();
+        this.name = name;
     }
 
     public List getProducts() {
@@ -46,9 +48,9 @@ public class chainAnimals {
     }
 
     public void printChain() {
-
-        System.out.println("\n=============================================n");
+    
         for (Iterator it = animals.iterator(); it.hasNext();) {
+              System.out.println("\n=============================================n");
             AbstractType prod = (AbstractType) it.next();
             System.out.println(prod.getName());
         } 

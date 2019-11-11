@@ -5,23 +5,20 @@
  */
 package composite;
 
+import java.util.List;
+
 /**
  *
  * @author girlc
  */
-public abstract class AbstractType {
-    protected String name;
 
-    public AbstractType(String name) {
-        super();
-        this.name = name;
-    }
+public interface AbstractType {
 
-    public String getName() {
-        return name;
-    }
+    List<AbstractType> getAnimals();
+    String getName();
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    void add(AbstractType e);
+
+    void remove(AbstractType e);
+
 }

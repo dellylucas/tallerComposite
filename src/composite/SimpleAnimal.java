@@ -5,14 +5,42 @@
  */
 package composite;
 
+import java.util.List;
+
 /**
  *
  * @author girlc
  */
-public class SimpleAnimal extends AbstractType {
-
+public class SimpleAnimal implements AbstractType {
+ String name;
     public SimpleAnimal(String name) {
-        super(name);
+        this.name=name;
+    }
+
+    @Override
+    public String getName() {
+        System.out.println(name);
+        return this.name;
+    }
+
+    @Override
+    public void add(AbstractType e) {
+       
+    }
+
+    @Override
+    public void remove(AbstractType e) {
+       
+    }
+
+    @Override
+    public List<AbstractType> getAnimals() {
+       // nothing to implement
+     return null;
+    }
+       @Override
+    public String toString() {
+        return  getName();
     }
 
 }
