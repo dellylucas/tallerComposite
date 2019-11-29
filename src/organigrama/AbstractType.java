@@ -27,6 +27,4 @@ public abstract class AbstractType {
     abstract public void add(AbstractType e);
 
     abstract public void remove(AbstractType e);
-
-	//abstract public void mostrar(int profundidad);elimin
 }
